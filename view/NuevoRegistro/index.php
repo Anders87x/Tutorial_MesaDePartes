@@ -3,7 +3,7 @@
     <head>
         <?php require_once("../MainHead/MainHead.php");?> 
 
-        <title>Home | Mesa de Partes</title>
+        <title>Nuevo Registro | Mesa de Partes</title>
 
     </head>
     <body>

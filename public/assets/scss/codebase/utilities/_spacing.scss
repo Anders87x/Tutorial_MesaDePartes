@@ -1,0 +1,29 @@
+//
+// Spacing
+// --------------------------------------------------
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $lengths in $space-breaks {
+        $length-x: map-get($lengths, x);
+        $length-y: map-get($lengths, y);
+
+        .#{$abbrev}-#{$size}  { #{$prop}:        $length-y $length-x !important; }
+        .#{$abbrev}t-#{$size} { #{$prop}-top:    $length-y !important; }
+        .#{$abbrev}r-#{$size} { #{$prop}-right:  $length-x !important; }
+        .#{$abbrev}b-#{$size} { #{$prop}-bottom: $length-y !important; }
+        .#{$abbrev}l-#{$size} { #{$prop}-left:   $length-x !important; }
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-right: $length-x !important;
+            #{$prop}-left:  $length-x !important;
+        }
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-top:    $length-y !important;
+            #{$prop}-bottom: $length-y !important;
+        }
+    }
+}
+
+.push,
+.items-push > div {
+    margin-bottom: $space-base;
+}

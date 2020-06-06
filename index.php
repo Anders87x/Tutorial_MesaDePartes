@@ -44,7 +44,7 @@
                                     </a>
                                     <h2 class="h5 font-w400 text-muted mb-0">Inicio de Sesion</h2>
                                 </div>
-                                <form class="js-validation-signin px-30" action="be_pages_auth_all.html" method="post">
+                                <div class="js-validation-signin px-30" action="be_pages_auth_all.html" method="post">
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
@@ -71,9 +71,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
+                                        <a class="btn btn-sm btn-hero btn-alt-primary" href="view/Home/">
                                             <i class="si si-login mr-10"></i> Acceder
-                                        </button>
+                                        </a>
                                         <div class="mt-30">
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="Registrarse/">
                                                 <i class="fa fa-plus mr-5"></i> Crear Cuenta
@@ -83,7 +83,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>

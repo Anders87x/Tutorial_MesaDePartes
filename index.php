@@ -1,3 +1,11 @@
+<?php
+    require_once("config/conexion.php");
+    if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
+        require_once("models/Usuario.php");
+        $usuario = new Usuario();
+        $usuario->login();
+    }
+?>
 <html lang="en" class="no-focus">
     <head>
         <meta charset="utf-8">
@@ -44,45 +52,83 @@
                                     </a>
                                     <h2 class="h5 font-w400 text-muted mb-0">Inicio de Sesion</h2>
                                 </div>
+
+                                <?php
+                                    if (isset($_GET["m"])){
+                                        switch($_GET["m"]){
+                                            case "1";
+                                            ?>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                                                        <span> El Usuario y/o Contraseña son incorrectos. </span>
+                                                    </div>
+                                                </div>
+                                            <?php
+                                            break;
+
+                                            case "2";
+                                            ?>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                                                        <span> Los campos estan vacios.</span>
+                                                    </div>
+                                                </div>
+                                            <?php
+                                            break;
+                                        }
+                                    }
+                                ?>
+
                                 <div class="js-validation-signin px-30" action="be_pages_auth_all.html" method="post">
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="text" class="form-control" id="login-username" name="login-username">
-                                                <label for="login-username">Correo Electronico</label>
+                                    <form action="" method="post" id="loginnum1">
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="email" class="form-control" id="correo" name="correo">
+                                                    <label for="login-username">Correo Electronico</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="password" class="form-control" id="login-password" name="login-password">
-                                                <label for="login-password">Contraseña</label>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="password" class="form-control" id="password" name="password">
+                                                    <label for="login-password">Contraseña</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
-                                                <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">Recuerdame</span>
-                                            </label>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">Recuerdame</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <a class="btn btn-sm btn-hero btn-alt-primary" href="view/Home/">
-                                            <i class="si si-login mr-10"></i> Acceder
-                                        </a>
-                                        <div class="mt-30">
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="Registrarse/">
-                                                <i class="fa fa-plus mr-5"></i> Crear Cuenta
-                                            </a>
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="RecuperarContrasena/">
-                                                <i class="fa fa-warning mr-5"></i> Olvide mi Contraseña
-                                            </a>
+                                        <div class="form-group">
+                                            <input type="hidden" name="enviar" class="form-control" value="si">
+                                            <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
+                                                <i class="si si-login mr-10"></i> Iniciar Sesión 
+                                            </button>
+                                            <div class="mt-30">
+                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="Registrarse/">
+                                                    <i class="fa fa-plus mr-5"></i> Crear Cuenta
+                                                </a>
+                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="RecuperarContrasena/">
+                                                    <i class="fa fa-warning mr-5"></i> Olvide mi Contraseña
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

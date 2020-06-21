@@ -87,49 +87,48 @@
                                     }
                                 ?>
 
-                                <div class="js-validation-signin px-30" action="be_pages_auth_all.html" method="post">
-                                    <form action="" method="post" id="loginnum1">
-                                        <div class="form-group row">
-                                            <div class="col-12">
-                                                <div class="form-material floating">
-                                                    <input type="email" class="form-control" id="correo" name="correo">
-                                                    <label for="login-username">Correo Electronico</label>
-                                                </div>
+                                <form action="" method="post" id="loginnum1">
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <div class="form-material floating">
+                                                <input type="email" class="form-control" id="correo" name="correo">
+                                                <label for="login-username">Correo Electronico</label>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <div class="col-12">
-                                                <div class="form-material floating">
-                                                    <input type="password" class="form-control" id="password" name="password">
-                                                    <label for="login-password">Contraseña</label>
-                                                </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <div class="form-material floating">
+                                                <input type="password" class="form-control" id="password" name="password">
+                                                <label for="login-password">Contraseña</label>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <div class="col-12">
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
-                                                    <span class="custom-control-indicator"></span>
-                                                    <span class="custom-control-description">Recuerdame</span>
-                                                </label>
-                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <label class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Recuerdame</span>
+                                            </label>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="hidden" name="enviar" class="form-control" value="si">
-                                            <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
-                                                <i class="si si-login mr-10"></i> Iniciar Sesión 
-                                            </button>
-                                            <div class="mt-30">
-                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="Registrarse/">
-                                                    <i class="fa fa-plus mr-5"></i> Crear Cuenta
-                                                </a>
-                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="RecuperarContrasena/">
-                                                    <i class="fa fa-warning mr-5"></i> Olvide mi Contraseña
-                                                </a>
-                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="enviar" class="form-control" value="si">
+                                        <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
+                                            <i class="si si-login mr-10"></i> Iniciar Sesión 
+                                        </button>
+                                        <div class="mt-30">
+                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="Registrarse/">
+                                                <i class="fa fa-plus mr-5"></i> Crear Cuenta
+                                            </a>
+                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="RecuperarContrasena/">
+                                                <i class="fa fa-warning mr-5"></i> Olvide mi Contraseña
+                                            </a>
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
+                              
                             </div>
                         </div>
                     </div>

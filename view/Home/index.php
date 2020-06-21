@@ -1,3 +1,7 @@
+<?php
+  require_once("../../config/conexion.php"); 
+  if(isset($_SESSION["usu_id"])){ 
+?>
 <!doctype html>
 <html lang="en" class="no-focus">
     <head>
@@ -44,8 +48,7 @@
             <!--Contenido -->
             <main id="main-container">
                 <div class="content">
-                    <h2 class="content-heading">Blank <small>Get Started</small></h2>
-                    <p>Create your own awesome project!</p>
+                   
                 </div>
             </main>
             <!-- Contenido -->
@@ -58,3 +61,8 @@
 
     </body>
 </html>
+<?php
+  } else {
+    header("Location:".Conectar::ruta()."index.php");
+  }
+?>

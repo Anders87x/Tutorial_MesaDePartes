@@ -50,58 +50,61 @@
                                     <h2 class="h5 font-w400 text-muted mb-0">Por favor agrege los detalles</h2>
                                 </div>
                                 <div class="px-30">
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="text" class="form-control" id="usu_nom" name="usu_nom">
-                                                <label for="usu_nom">Nombres</label>
+                                    <form method="post" id="usuario_form">
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="text" class="form-control" id="usu_nom" name="usu_nom" required>
+                                                    <label for="usu_nom">Nombres</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="text" class="form-control" id="usu_ape" name="usu_ape">
-                                                <label for="usu_ape">Apellidos</label>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="text" class="form-control" id="usu_ape" name="usu_ape" required>
+                                                    <label for="usu_ape">Apellidos</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="email" class="form-control" id="usu_correo" name="usu_correo">
-                                                <label for="usu_correo">Email</label>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="email" class="form-control" id="usu_correo" name="usu_correo" required>
+                                                    <label for="usu_correo">Email</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="password" class="form-control" id="usu_pass1" name="usu_pass1">
-                                                <label for="usu_pass1">Contraseña</label>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="password" class="form-control" id="usu_pass1" name="usu_pass1" required>
+                                                    <label for="usu_pass1">Contraseña</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="password" class="form-control" id="usu_pass2" name="usu_pass2">
-                                                <label for="usu_pass2">Confirmar Contraseña</label>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="password" class="form-control" id="usu_pass2" name="usu_pass2" required>
+                                                    <label for="usu_pass2">Confirmar Contraseña</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-sm btn-hero btn-alt-success">
-                                            <i class="fa fa-plus mr-10"></i> Crear Cuenta
-                                        </button>
-                                        <div class="mt-30">
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="../">
-                                                <i class="fa fa-user text-muted mr-5"></i> Acceso
-                                            </a>
+                                        <div class="form-group">
+                                            <button type="submit" name="action" value="add" id="btnguardar" class="btn btn-sm btn-hero btn-alt-success">
+                                                <i class="fa fa-plus mr-10"></i> Crear Cuenta
+                                            </button>
+                                            <div class="mt-30">
+                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="../">
+                                                    <i class="fa fa-user text-muted mr-5"></i> Acceso
+                                                </a>
+                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="../RecuperarContrasena/">
+                                                    <i class="fa fa-warning mr-5"></i> Olvide mi Contraseña
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +125,8 @@
         <script src="../public/assets/js/codebase.js"></script>
         <script src="../public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
         <script src="../public/assets/js/pages/op_auth_signup.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script type="text/javascript" src="registrarse.js"></script>
+
     </body>
 </html>

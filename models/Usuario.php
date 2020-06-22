@@ -35,5 +35,27 @@
 			}
 		}
 
+		public function insert_usuario($usu_nom,$usu_ape,$usu_correo,$usu_pass){
+            $conectar= parent::conexion();
+            parent::set_names();
+            $sql="INSERT INTO tm_usuario values (NULL,?,?,?,?,NULL, NULL, NULL, '1');";
+            $sql=$conectar->prepare($sql);
+            $sql->bindValue(1,$usu_nom);
+            $sql->bindValue(2,$usu_ape);
+			$sql->bindValue(3,$usu_correo);
+			$sql->bindValue(4,$usu_pass);
+            $sql->execute();
+		}
+		
+		public function get_correo_usuario($usu_correo){
+            $conectar= parent::conexion();
+            parent::set_names();
+            $sql="SELECT * FROM tm_usuario WHERE usu_correo=? AND est=1;";
+            $sql=$conectar->prepare($sql);
+			$sql->bindValue(1,$usu_correo);
+			$sql->execute();
+			return $resultado=$sql->fetchAll();
+        }
+
     }
 ?>

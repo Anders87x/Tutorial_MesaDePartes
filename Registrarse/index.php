@@ -49,101 +49,66 @@
                                     <h1 class="h3 font-w700 mt-30 mb-10">Crear Cuenta</h1>
                                     <h2 class="h5 font-w400 text-muted mb-0">Por favor agrege los detalles</h2>
                                 </div>
-                                <form class="js-validation-signup px-30" action="be_pages_auth_all.html" method="post">
+                                <div class="px-30">
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="text" class="form-control" id="signup-username" name="signup-username">
-                                                <label for="signup-username">Nombre y Apellido</label>
+                                                <input type="text" class="form-control" id="usu_nom" name="usu_nom">
+                                                <label for="usu_nom">Nombres</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="email" class="form-control" id="signup-email" name="signup-email">
-                                                <label for="signup-email">Email</label>
+                                                <input type="text" class="form-control" id="usu_ape" name="usu_ape">
+                                                <label for="usu_ape">Apellidos</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="password" class="form-control" id="signup-password" name="signup-password">
-                                                <label for="signup-password">Contraseña</label>
+                                                <input type="email" class="form-control" id="usu_correo" name="usu_correo">
+                                                <label for="usu_correo">Email</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="password" class="form-control" id="signup-password-confirm" name="signup-password-confirm">
-                                                <label for="signup-password-confirm">Confirmar Contraseña</label>
+                                                <input type="password" class="form-control" id="usu_pass1" name="usu_pass1">
+                                                <label for="usu_pass1">Contraseña</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-12">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="signup-terms" name="signup-terms">
-                                                <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">I agree to Terms &amp; Conditions</span>
-                                            </label>
+                                            <div class="form-material floating">
+                                                <input type="password" class="form-control" id="usu_pass2" name="usu_pass2">
+                                                <label for="usu_pass2">Confirmar Contraseña</label>
+                                            </div>
                                         </div>
                                     </div>
+                                    
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-sm btn-hero btn-alt-success">
                                             <i class="fa fa-plus mr-10"></i> Crear Cuenta
                                         </button>
                                         <div class="mt-30">
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="#" data-toggle="modal" data-target="#modal-terms">
-                                                <i class="fa fa-book text-muted mr-5"></i> Leer Terminos y condiciones
-                                            </a>
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="../">
                                                 <i class="fa fa-user text-muted mr-5"></i> Acceso
                                             </a>
                                         </div>
                                     </div>
-                                </form>
-                                <!-- END Sign Up Form -->
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- END Page Content -->
 
             </main>
-            <!-- END Main Container -->
-        </div>
-        <!-- END Page Container -->
-
-        <!-- Terms Modal -->
-        <div class="modal fade" id="modal-terms" tabindex="-1" role="dialog" aria-labelledby="modal-terms" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-slidedown" role="document">
-                <div class="modal-content">
-                    <div class="block block-themed block-transparent mb-0">
-                        <div class="block-header bg-primary-dark">
-                            <h3 class="block-title">Terms &amp; Conditions</h3>
-                            <div class="block-options">
-                                <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
-                                    <i class="si si-close"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="block-content">
-                            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-                            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-                            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-alt-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-alt-success" data-dismiss="modal">
-                            <i class="fa fa-check"></i> Perfect
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <script src="../public/assets/js/core/jquery.min.js"></script>
@@ -155,9 +120,9 @@
         <script src="../public/assets/js/core/jquery.countTo.min.js"></script>
         <script src="../public/assets/js/core/js.cookie.min.js"></script>
         <script src="../public/assets/js/codebase.js"></script>
-
         <script src="../public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
-
         <script src="../public/assets/js/pages/op_auth_signup.js"></script>
+
+        <script type="text/javascript" src="registrarse.js"></script>
     </body>
 </html>

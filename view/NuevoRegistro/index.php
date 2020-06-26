@@ -52,7 +52,7 @@
                 <div class="block">
                         <div class="block-header block-header-default">
                             <h3 class="block-title">Nuevo Registro <small>Mesa de Partes</small></h3>
-                            <input type="hidden" id="part_id" class="form-control"><!-- ID del Usuario useridx-->
+                           
                         </div>
                         <div class="block-content block-content-full">
                             <div class="form-group row">
@@ -70,7 +70,7 @@
                             <div class="block-content block-content-sm block-content-full bg-body-light">
                                 <div class="row">
                                     <div class="col-6">
-                                        <button type="button" class="btn btn-alt-info">
+                                        <button type="button" class="btn btn-alt-info" id="btnadd">
                                             <i class="fa fa-share-alt mr-5"></i> Adjuntar Documentos
                                         </button>
                                     </div>
@@ -89,7 +89,7 @@
                             <h3 class="block-title">Listado de Documentos <small>Mesa de Partes</small></h3>
                         </div>
                         <div class="block-content block-content-full">
-                            <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                            <table id="detalle_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
@@ -133,6 +133,8 @@
                 </div>
             </main>
             <!-- Contenido -->
+        
+        <?php require_once("modalarchivo.php");?> 
 
         <?php require_once("../MainFooter/MainFooter.php");?> 
 

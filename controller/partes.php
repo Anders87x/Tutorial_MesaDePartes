@@ -20,6 +20,10 @@
             $partes->update_partes($_POST["part_id"],$_POST["part_asun"],$_POST["part_desc"]);
         break;
 
+        case "insertdetalle":
+            $partes->insert_partesdetalle($_POST["part_id"],$_POST["partd_obs"],$_POST["partd_file"]);
+        break;
+
     }
 
 ?>

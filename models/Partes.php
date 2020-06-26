@@ -31,7 +31,38 @@
             $sql->execute();
         }
 
+        public function insert_partesdetalle($part_id,$partd_obs,$partd_file){
+            $conectar=parent::conexion();
+            parent::set_names();
 
+            require_once("Partes.php");
+            $partx = new Partes();
+            $partd_file = '';
+            if($_FILES["partd_file"]["name"] != '')
+            {
+                $partd_file = $partx->upload_file();
+            }else{
+                $partd_file = $_POST["hidden_file_imagen"];
+            }
+
+            $sql="insert into tm_detallepartes values (null, ?, ?,?,now(),1);";
+            $sql=$conectar->prepare($sql);
+            $sql->bindvalue(1, $part_id);
+            $sql->bindvalue(2, $partd_obs);
+            $sql->bindvalue(3, $partd_file);
+            $sql->execute();
+        }
+
+        public function upload_file(){
+            if(isset($_FILES["partd_file"]))
+            {
+              $extension = explode('.', $_FILES['partd_file']['name']);
+              $new_name = rand() . '.' . $extension[1];
+              $destination = '../public/src/' . $new_name;
+              move_uploaded_file($_FILES['partd_file']['tmp_name'], $destination);
+              return $new_name;
+            }
+        }
 
     }
 ?>

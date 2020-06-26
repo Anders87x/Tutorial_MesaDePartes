@@ -11,7 +11,7 @@
 
     </head>
     <body>
-        <div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed">
+        <div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxedv sidebar-inverse">
             <aside id="side-overlay">
                 <div id="side-overlay-scroll">
                     <div class="content-header content-header-fullrow">

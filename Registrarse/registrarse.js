@@ -1,6 +1,4 @@
 function init(){
-    
-
     $("#usuario_form").on("submit",function(e){
         guardaryeditar(e);	
     });

@@ -92,40 +92,13 @@
                             <table id="detalle_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                                 <thead>
                                     <tr>
-                                        <th class="text-center"></th>
-                                        <th>Name</th>
-                                        <th class="d-none d-sm-table-cell">Email</th>
-                                        <th class="d-none d-sm-table-cell" style="width: 15%;">Access</th>
-                                        <th class="text-center" style="width: 15%;">Profile</th>
+                                        <th class="text-center">Observación</th>
+                                        <th>Archivo</th>
+                                        <th class="text-center" style="width: 15%;">Accion</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="font-w600">Barbara Scott</td>
-                                        <td class="d-none d-sm-table-cell">customer1@example.com</td>
-                                        <td class="d-none d-sm-table-cell">
-                                            <span class="badge badge-danger">Disabled</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <button type="button" class="btn btn-sm btn-secondary" data-toggle="tooltip" title="View Customer">
-                                                <i class="fa fa-user"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td class="font-w600">Laura Carr</td>
-                                        <td class="d-none d-sm-table-cell">customer2@example.com</td>
-                                        <td class="d-none d-sm-table-cell">
-                                            <span class="badge badge-success">VIP</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <button type="button" class="btn btn-sm btn-secondary" data-toggle="tooltip" title="View Customer">
-                                                <i class="fa fa-user"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                  
                                 </tbody>
                             </table>
                         </div>

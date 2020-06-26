@@ -24,6 +24,29 @@
             $partes->insert_partesdetalle($_POST["part_id"],$_POST["partd_obs"],$_POST["partd_file"]);
         break;
 
+        case "deletedetalle":
+            $partes->delete_partesdetalle($_POST["partd_id"]);
+        break;
+
+        case "listardetalle":
+            $datos=$partes->list_partesdetalle($_POST["part_id"]);
+            $data= Array();
+            foreach($datos as $row){
+                $sub_array = array();
+                $sub_array[] = $row["partd_obs"];
+                $sub_array[] = '<a href="../../public/src/'.$row["partd_file"].'" target="_blank">'.$row["partd_file"].'</a>';
+                $sub_array[] = '<button type="button" onClick="eliminar('.$row["partd_id"].');"  id="'.$row["partd_id"].'" class="btn btn-outline-danger btn-icon"><div><i class="fa fa-trash"></i></div></button>';
+                $data[] = $sub_array;
+            }
+        
+            $results = array(
+                "sEcho"=>1,
+                "iTotalRecords"=>count($data),
+                "iTotalDisplayRecords"=>count($data),
+                "aaData"=>$data);
+            echo json_encode($results);
+        break;
+
     }
 
 ?>

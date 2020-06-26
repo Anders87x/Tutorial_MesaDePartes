@@ -64,5 +64,24 @@
             }
         }
 
+        public function list_partesdetalle($part_id){
+            $conectar=parent::conexion();
+            parent::set_names();
+            $sql="SELECT * FROM tm_detallepartes WHERE part_id=? and est=1;";
+            $sql=$conectar->prepare($sql);
+            $sql->bindvalue(1, $part_id);
+            $sql->execute();
+            return $resultado=$sql->fetchall(pdo::FETCH_ASSOC);
+        }
+
+        public function delete_partesdetalle($partd_id){
+            $conectar=parent::conexion();
+            parent::set_names();
+            $sql="update tm_detallepartes set est=0 where partd_id=?;";
+            $sql=$conectar->prepare($sql);
+            $sql->bindvalue(1, $partd_id);
+            $sql->execute();
+        }  
+
     }
 ?>

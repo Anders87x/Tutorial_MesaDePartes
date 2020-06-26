@@ -10,13 +10,13 @@
                         <div class="form-group row">
                             <label class="col-12 control-label" for="partd_obs">Observación</label>
                             <div class="col-12">
-                                <textarea rows="3" id="partd_obs" name="partd_obs" class="form-control text-uppercase"></textarea>
+                                <textarea rows="3" id="partd_obs" name="partd_obs" class="form-control text-uppercase" required></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-12" for="partd_file">Seleccionar Archivo</label>
                             <div class="col-12">
-                                <input type="file" id="partd_file" name="partd_file"/>
+                                <input type="file" id="partd_file" name="partd_file" accept=".pdf,.docx,.doc" required/>
                             </div>
                         </div>
                 </div>

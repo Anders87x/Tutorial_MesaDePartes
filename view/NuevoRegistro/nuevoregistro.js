@@ -10,8 +10,9 @@ $(document).ready(function(){
     $.post("../../controller/partes.php?op=insert",{usu_id:usu_id},function(data){
         data = JSON.parse(data);
         $('#part_id').val(data.part_id);
-    });
 
+        llenartabla(data.part_id);
+    });
 });
 
 function guardaryeditar(e){
@@ -29,8 +30,9 @@ function guardaryeditar(e){
                 'Se registro Correctamente',
                 'success'
             );
-            $('#detalle_form')[0].reset();
             $("#modalarchivo").modal('hide');
+            var part_id =  $('#part_id').val();
+            llenartabla(part_id);
         }
     });        
 }
@@ -41,7 +43,11 @@ $(document).on("click","#btnguardar", function(){
     var part_desc = $('#part_desc').val();
 
     if(part_asun=='' || part_desc==''){
-        
+        Swal.fire(
+            'Mesa De Partes',
+            'Campos Vacios',
+            'error'
+        );
     }else{
         $.post("../../controller/partes.php?op=update",{part_id:part_id,part_asun:part_asun,part_desc:part_desc},function(data){
             Swal.fire(
@@ -54,7 +60,67 @@ $(document).on("click","#btnguardar", function(){
 });
 
 $(document).on("click","#btnadd", function(){
+    $('#partd_obs').val('');
+    $('#partd_file').val('');
     $("#modalarchivo").modal('show');
 });
+
+function llenartabla(part_id){
+    tabla= $('#detalle_data').DataTable({
+        "aProcessing": true,//Activamos el procesamiento del datatables
+        "aServerSide": true,//Paginación y filtrado realizados por el servidor
+        dom: 'Bfrtip',//Definimos los elementos del control de tabla
+        "ajax":{
+        url:"../../controller/partes.php?op=listardetalle",
+        type : "post",
+        data:{part_id:part_id},						
+            error: function(e){
+                console.log(e.responseText);
+            },
+        },
+        "bDestroy": true,
+        "responsive": true,
+        "bInfo":true,
+        "iDisplayLength": 10,
+        "order": [[ 0, "desc" ]],
+        "language": {
+            "sProcessing":     "Procesando...",
+            "sLengthMenu":     "Mostrar _MENU_ registros",
+            "sZeroRecords":    "No se encontraron resultados",
+            "sEmptyTable":     "Ningún dato disponible en esta tabla",
+            "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+            "sInfoPostFix":    "",
+            "sSearch":         "Buscar:",
+            "sUrl":            "",
+            "sInfoThousands":  ",",
+            "sLoadingRecords": "Cargando...",
+            "oPaginate": {          
+                "sFirst":    "Primero",
+                "sLast":     "Último",
+                "sNext":     "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "oAria": {
+                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+            }
+        },
+    });
+}
+
+function eliminar(partd_id){
+    $.post("../../controller/partes.php?op=deletedetalle",{partd_id:partd_id},function(data){
+        Swal.fire(
+            'Mesa De Partes',
+            'Se elimino correctamente',
+            'info'
+        );
+    });
+
+    var part_id =  $('#part_id').val();
+    llenartabla(part_id);
+}
 
 init();

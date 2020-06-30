@@ -83,5 +83,15 @@
             $sql->execute();
         }  
 
+        public function list_partes($usu_id){
+            $conectar=parent::conexion();
+            parent::set_names();
+            $sql="SELECT * FROM tm_partes WHERE usu_id=? and est=1;";
+            $sql=$conectar->prepare($sql);
+            $sql->bindvalue(1, $usu_id);
+            $sql->execute();
+            return $resultado=$sql->fetchall(pdo::FETCH_ASSOC);
+        }
+
     }
 ?>

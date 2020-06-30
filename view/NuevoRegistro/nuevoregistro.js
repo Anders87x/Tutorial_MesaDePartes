@@ -50,11 +50,32 @@ $(document).on("click","#btnguardar", function(){
         );
     }else{
         $.post("../../controller/partes.php?op=update",{part_id:part_id,part_asun:part_asun,part_desc:part_desc},function(data){
-            Swal.fire(
-                'Mesa De Partes',
-                'Se registro Correctamente',
-                'success'
-            );
+            let timerInterval;
+            Swal.fire({
+            title: 'Mesa de Partes',
+            html: 'Guardado Registro...Espere..<b></b>.',
+            timer: 2000,
+            timerProgressBar: true,
+            onBeforeOpen: () => {
+                Swal.showLoading();
+                timerInterval = setInterval(() => {
+                const content = Swal.getContent();
+                if (content) {
+                    const b = content.querySelector('b');
+                    if (b) {
+                    b.textContent = Swal.getTimerLeft();
+                    }
+                }
+                }, 100)
+            },
+            onClose: () => {
+                clearInterval(timerInterval);
+            }
+            }).then((result) => {
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    location.reload();
+                }
+            });
         });
     }
 });

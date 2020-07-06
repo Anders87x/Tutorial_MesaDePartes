@@ -15,7 +15,6 @@ function guardaryeditar(e){
         contentType: false,
         processData: false,
         success: function(datos){
-            console.log(datos);
             if (datos=="pass"){
                 Swal.fire(
                     'Mesa De Partes',
@@ -34,6 +33,11 @@ function guardaryeditar(e){
                     'Se registro Correctamente',
                     'success'
                 );
+
+                $.post("../controller/email.php?op=send_nuevo", { usu_correo : usu_correo}, function(data){
+                
+                });
+
             }
             $('#usuario_form')[0].reset();
         }

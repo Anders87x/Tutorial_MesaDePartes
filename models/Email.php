@@ -25,7 +25,7 @@
             $this->From = $this->tu_email;
             $this->FromName = $this->tu_nombre="Recuperar Contraseña";
             $this->CharSet='UTF8';
-            $this->addAddress("davis_anderson_87@hotmail.com");
+            $this->addAddress($usu_correo);
             $this->WordWrap = 50;
             $this->IsHTML(true);
             $this->Subject = "Recuperar Contraseña";
@@ -56,7 +56,7 @@
             $this->From = $this->tu_email;
             $this->FromName = $this->tu_nombre="Registro Correcto";
             $this->CharSet='UTF8';
-            $this->addAddress("davis_anderson_87@hotmail.com");
+            $this->addAddress($usu_correo);
             $this->WordWrap = 50;
             $this->IsHTML(true);
             $this->Subject = "Registro Correcto";
@@ -79,7 +79,7 @@
             $this->From = $this->tu_email;
             $this->FromName = $this->tu_nombre="Nueva Solicitud";
             $this->CharSet='UTF8';
-            $this->addAddress("davis_anderson_87@hotmail.com");
+            $this->addAddress($usu_correo);
             $this->WordWrap = 50;
             $this->IsHTML(true);
             $this->Subject = "Nueva Solicitud";

@@ -42,6 +42,9 @@ $(document).on("click","#btnguardar", function(){
     var part_asun = $('#part_asun').val();
     var part_desc = $('#part_desc').val();
 
+    var usu_nom = $('#usernomx').val();
+    var usu_ape = $('#userapex').val();
+
     if(part_asun=='' || part_desc==''){
         Swal.fire(
             'Mesa De Partes',
@@ -66,7 +69,11 @@ $(document).on("click","#btnguardar", function(){
                     b.textContent = Swal.getTimerLeft();
                     }
                 }
-                }, 100)
+                }, 100);
+
+                $.post("../../controller/email.php?op=send_solicitud", { part_id : part_id,usu_nom : usu_nom, usu_ape : usu_ape}, function(data){
+                
+                });
             },
             onClose: () => {
                 clearInterval(timerInterval);

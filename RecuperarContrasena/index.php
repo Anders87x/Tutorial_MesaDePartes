@@ -36,7 +36,6 @@
                         </div>
                         <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white invisible" data-toggle="appear" data-class="animated fadeInRight">
                             <div class="content content-full">
-                                <!-- Header -->
                                 <div class="px-30 py-10">
                                     <a class="link-effect font-w700" href="index.html">
                                         <i class="si si-fire"></i>
@@ -44,18 +43,18 @@
                                     </a>
                                     <h2 class="h5 font-w400 text-muted mb-0">Recuperar Contraseña</h2>
                                 </div>
-                                <form class="js-validation-signin px-30" action="be_pages_auth_all.html" method="post">
+                                <div class="px-30">
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="text" class="form-control" id="login-username" name="login-username">
-                                                <label for="login-username">Correo Electronico</label>
+                                                <input type="text" class="form-control" id="usu_correo" name="usu_correo">
+                                                <label for="usu_correo">Correo Electronico</label>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
+                                        <button type="button" class="btn btn-sm btn-hero btn-alt-primary" id="btnrecuperar">
                                             <i class="si si-login mr-10"></i> Recuperar
                                         </button>
                                         <div class="mt-30">
@@ -64,7 +63,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -83,5 +82,7 @@
         <script src="../public/assets/js/codebase.js"></script>
         <script src="../public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
         <script src="../public/assets/js/pages/op_auth_signin.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script type="text/javascript" src="recuperarcontrasena.js"></script>
     </body>
 </html>

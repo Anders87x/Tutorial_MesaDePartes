@@ -8,6 +8,8 @@
 
         <div class="content-header-section">
             <input type="hidden" id="useridx" class="form-control" value=<?php echo $_SESSION["usu_id"]?>><!-- ID del Usuario useridx-->
+            <input type="hidden" id="usernomx" class="form-control" value=<?php echo $_SESSION["usu_nom"]?>><!-- NOM del Usuario useridx-->
+            <input type="hidden" id="userapex" class="form-control" value=<?php echo $_SESSION["usu_ape"]?>><!-- APE del Usuario useridx-->
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php echo $_SESSION["usu_nom"] ." ". $_SESSION["usu_ape"]?><i class="fa fa-angle-down ml-5"></i>

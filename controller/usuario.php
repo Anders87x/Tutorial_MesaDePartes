@@ -18,6 +18,11 @@
             }
         break;
 
+        case "correo":
+            $datos = $usuario->get_correo_usuario($_POST["usu_correo"]);
+            echo json_encode( $datos);
+        break;
+
     }
 
 ?>

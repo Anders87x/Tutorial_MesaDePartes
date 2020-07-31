@@ -17,7 +17,7 @@ $(document).on("click","#btnrecuperar", function(){
             'error'
         );
     }else{ 
-       $.post("../controller/usuario.php?op=correo", { usu_correo : usu_correo}, function(data){
+        $.post("../controller/usuario.php?op=correo", { usu_correo : usu_correo}, function(data){
             if (data=='[]'){
                 Swal.fire(
                     'Mesa De Partes',
@@ -28,6 +28,12 @@ $(document).on("click","#btnrecuperar", function(){
                 $.post("../controller/email.php?op=send_recuperar", { usu_correo : usu_correo}, function(data){
                     $('#usu_correo').val('');
                 });
+
+                Swal.fire(
+                    'Mesa De Partes',
+                    'Se envio correo',
+                    'success'
+                );
             }
         });
     }

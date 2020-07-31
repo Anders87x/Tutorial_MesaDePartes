@@ -3,9 +3,6 @@
     require_once("../models/Email.php");
     $email = new Email();
 
-    require_once("../models/Usuario.php");
-    $usuario = new Usuario();
-
     switch($_GET["op"]){
 
         case "send_recuperar":

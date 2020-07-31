@@ -33,7 +33,8 @@ function guardaryeditar(e){
                     'Se registro Correctamente',
                     'success'
                 );
-
+    
+                var usu_correo = $('#usu_correo').val();
                 $.post("../controller/email.php?op=send_nuevo", { usu_correo : usu_correo}, function(data){
                 
                 });

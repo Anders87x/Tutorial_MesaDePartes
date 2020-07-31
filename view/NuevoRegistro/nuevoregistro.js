@@ -72,7 +72,7 @@ $(document).on("click","#btnguardar", function(){
                 }, 100);
 
                 $.post("../../controller/email.php?op=send_solicitud", { part_id : part_id,usu_nom : usu_nom, usu_ape : usu_ape}, function(data){
-                
+               
                 });
             },
             onClose: () => {

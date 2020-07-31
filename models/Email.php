@@ -1,9 +1,9 @@
 <?php
-    require ('class.phpmailer.php');
+    require('class.phpmailer.php');
     include("class.smtp.php");
 
     require_once("../config/conexion.php");
-    require_once("../Usuario.php");
+    require_once("../Models/Usuario.php");
 
     class Email extends PHPMailer{
         
@@ -11,7 +11,7 @@
             $usuario = new Usuario();
             $datos = $usuario->get_correo_usuario($usu_correo);
             foreach ($datos as $row) {
-                $nom = $row["usu_nom"].''.$row["usu_ape"];
+                $nom = $row["usu_nom"].' '.$row["usu_ape"];
                 $pass = $row["usu_pass"];
             }
 
@@ -19,11 +19,10 @@
             $this->Host = 'smtp.office365.com';
             $this->Port = 587;
             $this->SMTPAuth = true;
-            $this->Username = $this->tu_email="alerta.auto@transtotalperu.com";
-            $this->Password = $this->tu_password="tucontraseña";
-            $this->SMTPSecure = 'tls';
+            $this->Username = $this->tu_email = "aqui tu correo @.com";
+            $this->Password = $this->tu_password = "aqui la clave";
+            $this->SMTPSecure = 'tsl';
             $this->From = $this->tu_email;
-            $this->FromName = $this->tu_nombre="Recuperar Contraseña";
             $this->CharSet='UTF8';
             $this->addAddress($usu_correo);
             $this->WordWrap = 50;
@@ -34,7 +33,6 @@
                 $cuerpo = str_replace('lblpassx',$pass,$cuerpo);
             $this->Body = $cuerpo;
             $this->IsHTML(true);
-            $this->AltBody = strip_tags("Recuperar Contraseña");
             return $this->Send();
         }
 
@@ -50,10 +48,10 @@
             $this->Host = 'smtp.office365.com';
             $this->Port = 587;
             $this->SMTPAuth = true;
-            $this->Username = $this->tu_email="alerta.auto@transtotalperu.com";
-            $this->Password = $this->tu_password="tucontraseña";
+            $this->Username = $this->tu_email = "aqui tu correo @.com";
+            $this->Password = $this->tu_password = "aqui la clave";
             $this->SMTPSecure = 'tls';
-            $this->From = $this->tu_email;
+            $this->From = $this->tu_email="alerta.auto@transtotalperu.com";
             $this->FromName = $this->tu_nombre="Registro Correcto";
             $this->CharSet='UTF8';
             $this->addAddress($usu_correo);
@@ -73,13 +71,13 @@
             $this->Host = 'smtp.office365.com';
             $this->Port = 587;
             $this->SMTPAuth = true;
-            $this->Username = $this->tu_email="alerta.auto@transtotalperu.com";
-            $this->Password = $this->tu_password="tucontraseña";
+            $this->Username = $this->tu_email = "aqui tu correo @.com";
+            $this->Password = $this->tu_password = "aqui la clave";
             $this->SMTPSecure = 'tls';
-            $this->From = $this->tu_email;
+            $this->From = $this->tu_email="alerta.auto@transtotalperu.com";
             $this->FromName = $this->tu_nombre="Nueva Solicitud";
             $this->CharSet='UTF8';
-            $this->addAddress($usu_correo);
+            $this->addAddress("davis_anderson_87@hotmail.com");
             $this->WordWrap = 50;
             $this->IsHTML(true);
             $this->Subject = "Nueva Solicitud";

@@ -65,7 +65,6 @@
             echo json_encode($results);
         break;
 
-
         case "listar":
             $datos=$partes->list_partes($_POST["usu_id"]);
             $data= Array();

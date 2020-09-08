@@ -6,9 +6,7 @@
 <html lang="en" class="no-focus">
     <head>
         <?php require_once("../MainHead/MainHead.php");?> 
-
         <title>Nuevo Registro | Mesa de Partes</title>
-
     </head>
     <body>
         <div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed  sidebar-inverse">
@@ -45,7 +43,6 @@
 
             <?php require_once("../MainHeader/MainHeader.php");?> 
 
-            <!--Contenido -->
             <main id="main-container">
                 <div class="content">
 
@@ -105,7 +102,6 @@
                     </div>
                 </div>
             </main>
-            <!-- Contenido -->
         
         <?php require_once("modalarchivo.php");?> 
 

@@ -48,14 +48,12 @@
         break;
 
         case "guardaryeditar":
-                if(empty($_POST["men_id"])){       
-                    if(is_array($datos)==true and count($datos)==0){
-                        $menu->insert_menu($_POST["men_ruta"],$_POST["men_icon"],$_POST["men_nom"]);     
-                    }
-                }
-                else {
-                    $menu->update_menu($_POST["men_id"],$_POST["men_ruta"],$_POST["men_icon"],$_POST["men_nom"]); 
-                }
+            if(empty($_POST["men_id"])){       
+                $menu->insert_menu($_POST["men_ruta"],$_POST["men_icon"],$_POST["men_nom"]);     
+            }
+            else {
+                $menu->update_menu($_POST["men_id"],$_POST["men_ruta"],$_POST["men_icon"],$_POST["men_nom"]); 
+            }
         break;
 
     }

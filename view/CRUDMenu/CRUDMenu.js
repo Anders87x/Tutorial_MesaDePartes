@@ -4,14 +4,10 @@ function init(){
     $("#menu_form").on("submit",function(e){
         guardaryeditar(e);	
     });
+
+    $('#val-select2').select2();
+    
 }
-
-$(document).on("click","#btnnuevo", function(){
-    $('#titulo_crud').html('CRUD-Nuevo Registro');
-
-    $('#menu_form')[0].reset();
-    $('#modalcrud').modal('show');
-});
 
 $(document).ready(function(){
 
@@ -57,7 +53,27 @@ $(document).ready(function(){
         },
     });
 
+    $.post("../../controller/categoria.php?op=combo",function(data, status){
+        $('#val-select2').html(data);
+    }); 
+
+    $("#val-select2").change(function(){
+        $("#val-select2 option:selected").each(function () {
+            cat_id = $(this).val();
+
+            console.log(cat_id);
+
+        });
+    });
 });
+
+$(document).on("click","#btnnuevo", function(){
+    $('#titulo_crud').html('CRUD-Nuevo Registro');
+
+    $('#menu_form')[0].reset();
+    $('#modalcrud').modal('show');
+});
+
 
 function editar(men_id){
     $.post("../../controller/menu.php?op=mostrar",{men_id : men_id}, function(data, status){

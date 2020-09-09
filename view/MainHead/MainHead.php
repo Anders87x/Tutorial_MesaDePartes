@@ -16,3 +16,6 @@
 <link rel="stylesheet" href="../../public/assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
 <link rel="stylesheet" id="css-main" href="../../public/assets/css/codebase.min.css">
+
+<link rel="stylesheet" href="../../public/assets/js/plugins/select2/select2.min.css">
+<link rel="stylesheet" href="../../public/assets/js/plugins/select2/select2-bootstrap.min.css">

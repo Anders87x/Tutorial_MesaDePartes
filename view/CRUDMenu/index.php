@@ -73,6 +73,24 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="content">
+                    <div class="block">
+                        <div class="block-header block-header-default">
+                            <h3 class="block-title">ComboBox <small>Mesa de Partes</small></h3>
+                        </div>
+                        <div class="block-content block-content-full">
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label" for="val-select2">Select2 <span class="text-danger">*</span></label>
+                                <div class="col-lg-8">
+                                    <select class="js-select2 form-control" id="val-select2" name="val-select2" style="width: 100%;" data-placeholder="Choose one..">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             <!-- Contenido -->
 
@@ -123,6 +141,7 @@
 
         <?php require_once("../MainJs/MainJs.php");?> 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="../../public/assets/js/plugins/select2/select2.full.min.js"></script>
         <script type="text/javascript" src="CRUDMenu.js"></script>
 
     </body>

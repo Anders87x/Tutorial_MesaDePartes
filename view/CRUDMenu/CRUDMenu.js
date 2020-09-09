@@ -6,6 +6,8 @@ function init(){
     });
 
     $('#val-select2').select2();
+
+    $('#cmbproducto').select2();
     
 }
 
@@ -61,10 +63,21 @@ $(document).ready(function(){
         $("#val-select2 option:selected").each(function () {
             cat_id = $(this).val();
 
-            console.log(cat_id);
+            $.post("../../controller/producto.php?op=combo",{cat_id:cat_id},function(data, status){
+                $('#cmbproducto').html(data);
+            }); 
 
         });
     });
+
+    $("#cmbproducto").change(function(){
+        $("#cmbproducto option:selected").each(function () {
+            prod_id = $(this).val();
+            
+            console.log(prod_id);
+        });
+    });
+
 });
 
 $(document).on("click","#btnnuevo", function(){

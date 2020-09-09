@@ -81,13 +81,23 @@
                         </div>
                         <div class="block-content block-content-full">
                             <div class="form-group row">
-                                <label class="col-lg-4 col-form-label" for="val-select2">Select2 <span class="text-danger">*</span></label>
+                                <label class="col-lg-4 col-form-label" for="val-select2">Categoria <span class="text-danger">*</span></label>
                                 <div class="col-lg-8">
                                     <select class="js-select2 form-control" id="val-select2" name="val-select2" style="width: 100%;" data-placeholder="Choose one..">
                                         <option></option>
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label" for="cmbproducto">Producto <span class="text-danger">*</span></label>
+                                <div class="col-lg-8">
+                                    <select class="js-select2 form-control" id="cmbproducto" name="cmbproducto" style="width: 100%;" data-placeholder="Choose one..">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

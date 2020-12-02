@@ -18,7 +18,7 @@ class Conectar {
 		}
 
 		public function ruta(){
-			return "http://localhost:90/mesadepartes/";
+			return "http://localhost:90/PERSONAL_mesadepartes/";
 		}
 	}
 ?>

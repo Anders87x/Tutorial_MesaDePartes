@@ -7,7 +7,7 @@
     <head>
         <?php require_once("../MainHead/MainHead.php");?> 
 
-        <title>Parsley | Mesa de Partes</title>
+        <title>TCPDF | Mesa de Partes</title>
 
     </head>
     <body>
@@ -51,34 +51,7 @@
                     <div class="block">
                         <div class="block-content block-content-full">
 
-                            <form method="post" id="menu_form">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="titulo_crud">CRUD</h5>
-                                    </div>
-                                    <div class="modal-body">
-   
-                                        <div class="form-group row">
-                                            <label class="col-12" for="men_ruta">Ingresa Numeros</label>
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="men_ruta" name="men_ruta" data-parsley-type="number" data-parsley-error-message="Error Ingresa Numero por favor"  placeholder="Ingrese Numeros" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label class="col-12" for="men_icon">Ingresa Texto</label>
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="men_icon" name="men_icon" data-parsley-type="alphanum" data-parsley-error-message="Error Ingresa Texto por favor no caracteres especiales"  placeholder="Ingrese Letras" required>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" name="action" id="#" value="add" class="btn btn-primary">Guardar</button>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    </div>
-                                </div>
-                            </form>
+                            <button type="button" id="btnver" class="btn btn-primary">Ver Informe</button>
 
                         </div>
                     </div>
@@ -92,8 +65,7 @@
         <?php require_once("../MainJs/MainJs.php");?> 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script src="../../public/assets/js/plugins/select2/select2.full.min.js"></script>
-        <script src="../../public/assets/js/plugins/parsley/parsley.js"></script>
-        <script type="text/javascript" src="EjemParsleyJS.js"></script>
+        <script type="text/javascript" src="ejemtcpdf.js"></script>
 
     </body>
 </html>

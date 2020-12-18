@@ -8,7 +8,7 @@ class Conectar {
 				
 				return $conectar;	
 			} catch (Exception $e) {
-				print "¡Error Mesa de Partes BD!: " . $e->getMessage() . "<br/>";
+				print "¡Error BD!: " . $e->getMessage() . "<br/>";
 				die();	
 			}
 		}

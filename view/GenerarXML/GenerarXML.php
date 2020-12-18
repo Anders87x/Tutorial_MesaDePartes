@@ -280,17 +280,17 @@
                     <Row ss:AutoFitHeight='0' ss:Height='15.00'>
                         <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>" . $row['men_id'] . "</Data></Cell>
                         <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>" . $row['men_nom'] . "</Data></Cell>
-                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>07/09/2020</Data></Cell>
-                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>08/09/2020</Data></Cell>
+                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>" . $row['men_ruta'] . "</Data></Cell>
+                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>" . $row['men_ruta'] . "</Data></Cell>
                         <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'></Data></Cell>
                         <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>MEDICINAS</Data></Cell>
                         <Cell ss:StyleID='_sty_nquWBR001'><Data ss:Type='Number'>24.00</Data></Cell>
                         <Cell ss:StyleID='_sty_nquWBR001'><Data ss:Type='Number'>9.00</Data></Cell>
                         <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>ESSALUD</Data></Cell>
                         <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>001-009083</Data></Cell>
-                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>FAC</Data></Cell>
-                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>002-37467</Data></Cell>
-                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>COPIA</Data></Cell>
+                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>" . $row['men_ruta'] . "</Data></Cell>
+                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>" . $row['men_ruta'] . "</Data></Cell>
+                        <Cell ss:StyleID='_sty_squWBL001'><Data ss:Type='String'>" . $row['men_ruta'] . "</Data></Cell>
                     </Row>
                     ";
                     }
